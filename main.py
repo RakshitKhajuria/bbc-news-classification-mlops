@@ -7,4 +7,4 @@ from src.logger import logging
 DataIngestion=data_ingestion.DataIngestion()
 train_path,test_path=DataIngestion.initiate_data_ingestion()
 DataTransformation=data_transformation.DataTransformation()
-input_feature_train_arr,target_feature_train_df,input_feature_test_arr,target_feature_test_df,_=DataTransformation.initiate_data_transformation(train_path,test_path)
+train_arr,test_arr,_=DataTransformation.initiate_data_transformation(train_path,test_path)
