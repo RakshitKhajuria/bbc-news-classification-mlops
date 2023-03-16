@@ -62,6 +62,10 @@ class DataTransformation:
                 f"Applying preprocessing object on training dataframe and testing dataframe."
             )
 
+            logging.info(
+                f"Preprocessing Data......."
+            )
+
             input_feature_train_df["clean_text"]=preprocessDataset(input_feature_train_df["Text"]) 
             input_feature_test_df["clean_text"]=preprocessDataset(input_feature_test_df["Text"])
 
@@ -69,6 +73,10 @@ class DataTransformation:
                 f"All Data Preprocessed"
             )
 
+            logging.info(
+                f"Applying TF-IDF"
+            )
+            
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df["clean_text"])
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df["clean_text"])
 
