@@ -3,6 +3,9 @@ numpy
 seaborn
 matplotlib
 scikit-learn
+nltk
+WordCloud
+spacy
 catboost
 xgboost
 dill
