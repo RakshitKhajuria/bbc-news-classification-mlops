@@ -46,7 +46,7 @@ def main():
 
 
                     
-                          st.button("REST", on_click=clear_text)
+                          st.button("Reset", on_click=clear_text)
 
 
                           with col2:
@@ -54,7 +54,7 @@ def main():
                                 st.success("Prediction")
                                 st.write(pred) 
                                 st.success("Probability Graph")
-                                fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability')
+                                fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
                                 st.altair_chart(fig,use_container_width=True)
                      else:
                             col2.write("Provide more information ")
