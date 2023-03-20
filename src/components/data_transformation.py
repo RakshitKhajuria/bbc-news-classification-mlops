@@ -19,6 +19,7 @@ from src.utils import save_object
 class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl")
 
+
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
@@ -66,8 +67,10 @@ class DataTransformation:
                 f"Preprocessing Data......."
             )
 
-            input_feature_train_df["clean_text"]=preprocessDataset(input_feature_train_df["Text"]) 
-            input_feature_test_df["clean_text"]=preprocessDataset(input_feature_test_df["Text"])
+            input_feature_train_df['Clean_Text'] = input_feature_train_df['Text'].apply(preprocessDataset)
+            input_feature_test_df['Clean_Text'] = input_feature_test_df['Text'].apply(preprocessDataset)
+            input_feature_train_df.to_csv("artifacts/clean_train.csv")
+            input_feature_test_df.to_csv("artifacts/clean_test.csv")
 
             logging.info(
                 f"All Data Preprocessed"
