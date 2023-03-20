@@ -38,19 +38,9 @@ def main():
                      if len(no_punct.split())>=5:
                           PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
                           pred,probability=PredictPipeline.predict()
-
-              
-                        
-
                           st.write(probability) 
 
-
-                    
-                          st.button("Reset", on_click=clear_text)
-
-
-                          with col2:
-                                
+                          with col2:         
                                 st.success("Prediction")
                                 st.write(pred) 
                                 st.success("Probability Graph")
@@ -58,13 +48,7 @@ def main():
                                 st.altair_chart(fig,use_container_width=True)
                      else:
                             col2.write("Provide more information ")
-                    
-                            st.button("REST", on_click=clear_text)
-
-
-                    
-                
-                     
+                            st.button("Reset", on_click=clear_text)
 
 
     except Exception as e:
