@@ -8,9 +8,9 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder,StandardScaler
 from src.TextProcessing import preprocessDataset
-from src.utils import encode_categorical
 from src.exception import CustomException
 from src.logger import logging
+from sklearn.preprocessing import LabelEncoder
 import os
 
 from src.utils import save_object
@@ -18,6 +18,7 @@ from src.utils import save_object
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl")
+    LabelEncoder_obj_file_path=os.path.join('artifacts',"LabelEncoder.pkl")
 
 
 class DataTransformation:
@@ -86,9 +87,12 @@ class DataTransformation:
             logging.info(
                 f"Feature Extraction Done"
             )
-
-            target_feature_train_df=encode_categorical(target_feature_train_df)
-            target_feature_test_df=encode_categorical(target_feature_test_df)
+    
+           
+            label_encoder = LabelEncoder()
+            label_encoder.fit(target_feature_train_df)
+            target_feature_train_df=label_encoder.transform(target_feature_train_df)
+            target_feature_test_df=label_encoder.transform(target_feature_test_df)
 
             logging.info(
                 f"Converted categorical column to numerical column"
@@ -104,6 +108,12 @@ class DataTransformation:
 
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessing_obj
+
+            )
+            save_object(
+
+                file_path=self.data_transformation_config.LabelEncoder_obj_file_path,
+                obj=label_encoder
 
             )
 

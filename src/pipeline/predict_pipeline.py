@@ -13,13 +13,18 @@ class PredictPipeline:
         try:
             model_path='artifacts/model.pkl'
             preprocessor_path='artifacts/proprocessor.pkl'
+            LabelEncoder_path='artifacts/LabelEncoder.pkl'
+
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
+            LabelEncoder=load_object(file_path=LabelEncoder_path)
             clean_text=preprocessDataset(self.text)
-            vectorized_text=preprocessor.transform(clean_text)
-            preds=model.predict(vectorized_text)
+            vectorized_text=preprocessor.transform([clean_text])
+            result = LabelEncoder.inverse_transform(model.predict(vectorized_text)) 
+
+
             
-            return preds
+            return result[0]
         
         except Exception as e:
             raise CustomException(e,sys)

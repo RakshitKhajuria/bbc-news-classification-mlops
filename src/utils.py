@@ -1,6 +1,5 @@
 import os
 import sys
-from sklearn.preprocessing import LabelEncoder
 import numpy as np 
 import pandas as pd
 import dill
@@ -21,16 +20,7 @@ def save_object(file_path, obj):
         raise CustomException(e, sys)
     
 
-def encode_categorical(column):
-    try:
-        le = LabelEncoder()
-        le.fit(column)
-        encoded = le.transform(column)
-        return encoded
 
-    except Exception as e:
-        raise CustomException(e, sys)
-    
 
 
 
