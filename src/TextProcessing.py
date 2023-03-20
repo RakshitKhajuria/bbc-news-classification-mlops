@@ -6,6 +6,11 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 from src.exception import CustomException
 import sys
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 def preprocessDataset(train_text):
     try:
