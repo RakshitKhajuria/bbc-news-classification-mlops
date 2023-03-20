@@ -7,16 +7,12 @@ import pandas as pd
 import altair as alt
 from src.utils import load_object
 
-
 html_temp = """
 <div style ="background-color:#51E1ED;padding:13px">
 <h1 style ="color:black;text-align:center;"> BBC News Classification !🍥</h1>
 </div>
 """
 st.markdown(html_temp, unsafe_allow_html = True)
-
-
-
 
 def main():
     try:
@@ -25,11 +21,9 @@ def main():
             col1, col2 = st.columns(2)
 
             def clear_text():
-                st.session_state["text"] = ""
-
+                st.session_state["text"] = ""          
                 
-                
-            if st.button("FIND"):
+            if st.button("Analyze !"):
                 st.button("Reset", on_click=clear_text, key = "reset")
 
                 with col1:
@@ -59,7 +53,6 @@ st.sidebar.text("BBC News Classification")
 st.sidebar.subheader("By")
 st.sidebar.text("Rakshit Khajuria - 19bec109")
 st.sidebar.text("Prikshit Sharma - 19bec062")
-
 
 if __name__ == '__main__':
 	main()
