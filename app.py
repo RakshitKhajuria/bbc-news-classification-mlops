@@ -30,12 +30,13 @@ def main():
                 
                 
             if st.button("FIND"):
+                st.button("Reset", on_click=clear_text, key = "reset")
 
                 with col1:
-                     st.success("Original Text")
-                     st.write(raw_text)
-                     st.success("Prediction Probability")
                      if len(no_punct.split())>=5:
+                          st.success("Original Text")
+                          st.write(raw_text)
+                          st.success("Prediction Probability")
                           PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
                           pred,probability=PredictPipeline.predict()
                           st.write(probability) 
@@ -46,27 +47,18 @@ def main():
                                 st.success("Probability Graph")
                                 fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
                                 st.altair_chart(fig,use_container_width=True)
+                                
                      else:
                             col2.write("Provide more information ")
-                            st.button("Reset", on_click=clear_text)
-
 
     except Exception as e:
         raise CustomException(e,sys)
 
-
-
 st.sidebar.subheader("About App")
-st.sidebar.text("BBC News Classification App with Streamlit")
-
-
+st.sidebar.text("BBC News Classification")
 st.sidebar.subheader("By")
 st.sidebar.text("Rakshit Khajuria - 19bec109")
 st.sidebar.text("Prikshit Sharma - 19bec062")
-
-
-
-
 
 
 if __name__ == '__main__':
