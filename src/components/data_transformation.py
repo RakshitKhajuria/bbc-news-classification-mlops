@@ -80,8 +80,8 @@ class DataTransformation:
                 f"Applying TF-IDF"
             )
             
-            input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df["clean_text"])
-            input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df["clean_text"])
+            input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df["Clean_Text"])
+            input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df["Clean_Text"])
 
             logging.info(
                 f"Feature Extraction Done"
