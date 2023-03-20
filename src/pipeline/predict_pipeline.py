@@ -20,13 +20,20 @@ class PredictPipeline:
             LabelEncoder=load_object(file_path=LabelEncoder_path)
             clean_text=preprocessDataset(self.text)
             vectorized_text=preprocessor.transform([clean_text])
-            prob=model.predict_proba(vectorized_text) 
+            probability=model.predict_proba(vectorized_text) 
 
             result = LabelEncoder.inverse_transform(model.predict(vectorized_text))
-            
 
             
-            return result[0],prob
+            proba_df = pd.DataFrame(probability)
+            proba_df_clean = proba_df.T.reset_index()  
+            proba_df_clean.columns = ["Category", "Probability"]
+            proba_df_clean["Category"]=LabelEncoder.inverse_transform(proba_df_clean["Category"])
+            proba_df_clean.sort_values("Probability",ascending=False,inplace =True)
+
+
+            
+            return result[0],proba_df_clean
         
         except Exception as e:
             raise CustomException(e,sys)
