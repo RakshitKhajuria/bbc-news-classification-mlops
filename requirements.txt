@@ -10,4 +10,5 @@ catboost
 xgboost
 dill
 keras
+streamlit
 -e .

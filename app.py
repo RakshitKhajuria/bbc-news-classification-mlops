@@ -28,10 +28,11 @@ def main():
                 if len(no_punct.split())>=5:
 
                     PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
-                    pred=PredictPipeline.predict()
+                    pred,probability=PredictPipeline.predict()
 
 
                     col2.write(pred)
+                    col2.write(probability)
                 
                     st.button("REST", on_click=clear_text)
                 else:
