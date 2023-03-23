@@ -36,8 +36,8 @@ def test():
         raw_text = request.form['news']
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
-        
-        return render_template('predict.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)])
+        fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
+        return render_template('predict.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)], chart=fig.to_json())
     
     except Exception as e:
         raise CustomException(e,sys)

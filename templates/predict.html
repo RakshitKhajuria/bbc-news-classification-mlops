@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>News Classification</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <style type = text/css>
     
     div{
@@ -126,6 +129,13 @@ body {
 
     {{ table|safe }}
   {% endfor %}</p>
+  
+  <div id="chart"></div>
+  <script>
+    const chartSpec = {{ chart|safe }};
+    const chartContainer = document.getElementById('chart');
+    vegaEmbed(chartContainer, chartSpec);
+  </script>
 </div>
 <footer class="mt-auto text-center fixed-bottom">
     <p>Designed by  <a href="https://www.linkedin.com/in/rakshit-khajuria-3627781b8/" class="text-white">@Rakshit Khajuria</a>.<br> Github : <a href="https://github.com/Ryzxxl" class="text-white">Ryzxxl</p>
