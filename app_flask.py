@@ -31,7 +31,7 @@ def test():
         
 
 
-        return render_template('predict.html', results=pred)
+        return render_template('predict.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)])
     
     except Exception as e:
         raise CustomException(e,sys)

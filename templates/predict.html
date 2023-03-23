@@ -122,6 +122,10 @@ body {
     <button type="submit">Predict</button>
   </form>
   <p>You entered: {{ results }}</p>
+  <p>{% for table in tables %}
+
+    {{ table|safe }}
+  {% endfor %}</p>
 </div>
 <footer class="mt-auto text-center fixed-bottom">
     <p>Designed by  <a href="https://www.linkedin.com/in/rakshit-khajuria-3627781b8/" class="text-white">@Rakshit Khajuria</a>.<br> Github : <a href="https://github.com/Ryzxxl" class="text-white">Ryzxxl</p>
