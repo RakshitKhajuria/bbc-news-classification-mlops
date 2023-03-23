@@ -18,8 +18,16 @@ def start():
 
 @app.route('/submit')
 def predicthome():
-    
     return render_template('predict.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/dataset')
+def dataset():
+    return render_template('dataset.html')
+
     
 @app.route('/submit', methods=['POST','GET'])
 def test():
@@ -29,8 +37,6 @@ def test():
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
         
-
-
         return render_template('predict.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)])
     
     except Exception as e:
