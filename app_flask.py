@@ -15,6 +15,11 @@ app = Flask(__name__)
 @app.route('/', )
 def start():
     return render_template('home.html')
+
+@app.route('/submit')
+def predicthome():
+    
+    return render_template('predict.html')
     
 @app.route('/submit', methods=['POST','GET'])
 def test():
@@ -26,7 +31,7 @@ def test():
         
 
 
-        return render_template('pred.html', results=pred)
+        return render_template('predict.html', results=pred)
     
     except Exception as e:
         raise CustomException(e,sys)
