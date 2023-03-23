@@ -20,13 +20,13 @@ def start():
 def test():
     try:
         
-        raw_text = request.form['message']
+        raw_text = request.form['news']
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
         
 
-        
-        return render_template('result.html', message=result)
+
+        return render_template('home.html', results=pred)
     
     except Exception as e:
         raise CustomException(e,sys)
