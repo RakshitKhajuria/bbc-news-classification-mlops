@@ -1,0 +1,24 @@
+<!-- HOMEPAGE -->
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Classification</title>
+  </head>
+  <body>
+    <div>
+      <h1>News Classification</h1>
+      <form action="/submit" method="post">
+        <label for="news">Enter news here:</label>
+        <br>
+        <input type="text" name="news" id="news" required>
+        <br>
+        <button type="submit">Predict</button>
+      </form>
+      <p>You entered: {{ results }}</p>
+    </div>
+  </body>
+</html>
+
+
+

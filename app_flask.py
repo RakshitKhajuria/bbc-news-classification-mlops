@@ -26,7 +26,7 @@ def test():
         
 
 
-        return render_template('home.html', results=pred)
+        return render_template('pred.html', results=pred)
     
     except Exception as e:
         raise CustomException(e,sys)
