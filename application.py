@@ -5,7 +5,6 @@ import string
 from src.exception import CustomException
 import pandas as pd
 import altair as alt
-from src.utils import load_object
 
 html_temp = """
 <div style ="background-color:#51E1ED;padding:13px">
