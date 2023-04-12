@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Open+Sans:wght@300;500;600&family=Oswald:wght@200;700&display=swap');
+:root{
+  --ligBlue: #5DA3FA;
+  --darkBlue: #3944F7;
+}
+
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1078&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 *{
   margin:0;
   padding:0;
@@ -11,7 +24,7 @@
     height:100vh;
     overflow-y:auto;
     overflow-x: hidden;
-    background: #1f1f1f;
+    /* background: #1f1f1f; */
 }
 
 .container{
@@ -19,6 +32,7 @@
     margin: 0 auto;
     position: relative;
     /* padding: 0 8rem; */
+
 }
 
 .navbar{
@@ -59,12 +73,12 @@ a{
 .nav-items div a:hover{
     transition: 0.2s ease;
     font-weight: bold;
-    color: #5DA3FA;
+    color: var(--ligBlue);
 
 }
 
 .action {
-    background-color: #5DA3FA;
+    background-color: var(--ligBlue);
     color: #fff;
     padding: 0.5rem 1rem;
     margin-top: -2px;
@@ -80,7 +94,7 @@ a{
 .action:hover{
     scale: 1.05;
     color: #fff;
-    background-color: #3944F7;
+    background-color: var(--darkBlue);
 }
 
 
@@ -107,13 +121,13 @@ a{
     font-size: 35px;
 }
 .news{
-    color: #5DA3FA;
+    color: var(--ligBlue);
     font-weight: 600;
 }
 
 
 .predict h2{
-    color: #5DA3FA;
+    color: var(--ligBlue);
     font-size: 32px;
     text-align: center;
     margin-top: 28rem;
