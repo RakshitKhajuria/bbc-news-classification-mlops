@@ -14,19 +14,26 @@ app = Flask(__name__)
 
 @app.route('/', )
 def start():
-    return render_template('home.html')
+    return render_template('index.html')
 
-@app.route('/submit')
-def predicthome():
-    return render_template('predict.html')
+@app.route('/reset', methods=['POST','GET'])
+def reset():
+    try:
+        return render_template('index.html')
+    
+    except Exception as e:
+        raise CustomException(e,sys)
+# @app.route('/submit')
+# def predicthome():
+#     return render_template('predict.html')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+# @app.route('/about')
+# def about():
+#     return render_template('about.html')
 
-@app.route('/dataset')
-def dataset():
-    return render_template('dataset.html')
+# @app.route('/dataset')
+# def dataset():
+#     return render_template('dataset.html')
 
     
 @app.route('/submit', methods=['POST','GET'])
@@ -37,7 +44,7 @@ def test():
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
         fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
-        return render_template('predict.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)], chart=fig.to_json())
+        return render_template('index.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)], chart=fig.to_json())
     
     except Exception as e:
         raise CustomException(e,sys)

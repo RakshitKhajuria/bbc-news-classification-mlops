@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Open+Sans:wght@300;500;600&family=Oswald:wght@200;700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: open sans, sans-serif;
+  scroll-behavior: smooth;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-y:auto;
+    overflow-x: hidden;
+    background: #1f1f1f;
+}
+
+.container{
+    width:1200px;
+    margin: 0 auto;
+    position: relative;
+    /* padding: 0 8rem; */
+}
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 60px;
+    width: 100%;
+    /* min-width: 1200px; */
+    padding-top:1rem;
+}
+
+.logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-items{
+    display:flex;
+    gap:2rem;
+    padding: 0 4em;
+}
+
+.nav-items div{
+    font-size:1.1rem;
+    font-weight:500;
+    cursor:pointer;
+}
+
+a{
+   text-decoration: none;
+   color: #fff;
+}
+
+
+.nav-items div a:hover{
+    transition: 0.2s ease;
+    font-weight: bold;
+    color: #5DA3FA;
+
+}
+
+.action {
+    background-color: #5DA3FA;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin-top: -2px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.8s ease;
+}
+
+.action:hover{
+    scale: 1.05;
+    color: #fff;
+    background-color: #3944F7;
+}
+
+
+/* hero section */
+.herosection{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.herosection h1{
+    font-size: 60px;
+    margin-top: 80px;
+    font-weight: 600;
+    text-transform: uppercase;
+}    
+
+.hero-sub-heading{
+    margin: 35px auto;
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 35px;
+}
+.news{
+    color: #5DA3FA;
+    font-weight: 600;
+}
+
+
+.predict h2{
+    color: #5DA3FA;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 28rem;
+    position: relative;
+}
+.predict textarea{
+    margin-top: 10px;
+    width: 1200px;
+    resize: none;
+    height: 59px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px;
+    max-height: 500px;
+    border: 1px solid #758283;
+    box-shadow: 2px 2px 10px #758283;
+  }
+  textarea::placeholder{
+    color: #b3b3b3;
+  }
+  textarea:is(:focus, :valid){
+    padding: 14px;
+    border: 2px solid #758283;
+  }
+  textarea::-webkit-scrollbar{
+    width: 0px;
+  }
+
+
+
+.btn{
+    display: block;
+    margin: 0 ;
+    margin-top: 10px;
+}
+
+.action{
+    font-size: 15px;
+}
+
+
+#about-us {
+    padding: 50px 0;
+    color: #1f1f1f;
+    background-color: #fff;
+  }
+  
+  
+.abt-heading{
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .social-links {
+    font-size: 32px;
+    gap: 2rem;
+  }
+  
+  .social-links a {
+    color: #666;
+    margin-right: 20px;
+  }
+  
+  .social-links a:hover {
+    color: #0077b5;
+  }
+  
+  .git :hover{
+    color: #758283;
+  }
+
+
+
+  #wrapper::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #wrapper::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  #wrapper::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  #wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+  }
