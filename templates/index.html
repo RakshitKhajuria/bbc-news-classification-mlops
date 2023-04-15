@@ -28,12 +28,11 @@
                 
                 <div class="nav-items">
                     <div><a href="#about">About</a></div>
-                    <div><a href="#contact">Contact</a></div>
-                    <a href="#" class="action">Get Started</a>
+                    <div><a href="#contributors">Contributors</a></div>
+                    <a href="#start" class="action">Get Started</a>
                     
                 </div>
 
-                <!-- <img src="./image.jpg" height="80" alt="prikshit" width="80"> -->
             </div>
         </div>
 
@@ -45,48 +44,42 @@
             </div>
         </div>
 
-        <div class="container predict">
-            <!-- <h2>Enter news here:</h2> 
+        <div class="predict" id="start">
 
-            <textarea spellcheck="false" placeholder="Type something..." required></textarea> -->
-
-            <!-- <button type="submit" class="action btn"> submit</button> -->
-
+          <div class="flex">
             <form action="/submit" method="post">
+              <h2>Enter news here:</h2> 
 
-                <h2>Enter news here:</h2> 
-
-                <textarea spellcheck="false" name="news" id="news" placeholder="Type something..." required></textarea>
-                <!-- <label for="news">Enter news here:</label>
-                <br>
-                <input type="text" name="news" id="news" required>
-                <br> -->
+              <textarea spellcheck="false" class="container" name="news" id="news" placeholder="Enter News..." required></textarea>
                 <button type="submit" class="action btn" id="toggle-btn">Predict</button>
             </form>
 
             <form action="/reset" method="get">
               <button  type="submit" onsubmit="" class="action btn">reset</button>
-          </form>
-               
-        </div>
-        <div id="hi" style="display: none;">show result</div>
-        <div class="newsType" id="result" style=" font-size: 25px;"> {{ results }}</div>
-        <div class="predictions">
-          <p class="predictRes" id="tab">{% for table in tables %}
-  
-          {{ table|safe }}
-          
-          {% endfor %}
-          </p>
+            </form>
 
-          <div id="chart" class="predictRes">
+          </div>
+            <div>show result</div>
+            <div class="newsType" id="result" style=" font-size: 25px;"> {{ results }}</div>
+            <div class="predictions">
+            <p class="predictRes" id="tab">{% for table in tables %}
+  
+            {{ table|safe }}
+          
+            {% endfor %}
+            </p>
+
+            <div id="chart" class="predictRes">
             <script>
               const chartSpec = {{ chart|safe }};
               const chartContainer = document.getElementById('chart');
               vegaEmbed(chartContainer, chartSpec);
             </script>
+            </div>
+          </div>
         </div>
-
+      
+            <!-- 
             <script>
               const toggleBtn = document.getElementById('toggle-btn');
               const heading = document.getElementById('hi');
@@ -95,19 +88,71 @@
 
               heading.style.display = "block";
             });
-            </script>
-    </div>
+            </script> -->
 
-    <div id="about-us">
-      <div class="container">
-        <h2 class="abt-heading">About Us</h2>
-        <p>Welcome to our News Classification project! Our mission is to help users easily classify news articles into one of five categories: politics, sports, entertainment, technology, and business. Our app uses machine learning algorithms to analyze the text of news articles and predict the most appropriate category for the article.</p>
-        <p>Our team consists of a group of passionate developers and machine learning experts who are dedicated to building high-quality software that solves real-world problems. We believe that our News Classification app can help make it easier for people to stay informed about current events by making it easier to find articles on topics that interest them.</p>
-        <p>Our app is designed to be user-friendly and easy to use. Simply enter the text of the news article you want to classify into our app, and it will predict which category the article belongs to. We hope that our app will be useful for journalists, researchers, and anyone else who needs to quickly and accurately classify news articles.</p>
-        <p>Thank you for visiting our website and we hope you find our app useful. If you have any questions or feedback, please don't hesitate to contact us.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a class="git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <div id="about">
+              <div class="container">
+                <h2 class="abt-heading">About Us</h2>
+                <p>Welcome to our News Classification project! Our mission is to help users easily classify news articles into one of five categories: politics, sports, entertainment, technology, and business. Our app uses machine learning algorithms to analyze the text of news articles and predict the most appropriate category for the article.</p>
+                <p>Our team consists of a group of passionate developers and machine learning experts who are dedicated to building high-quality software that solves real-world problems. We believe that our News Classification app can help make it easier for people to stay informed about current events by making it easier to find articles on topics that interest them.</p>
+                <p>Our app is designed to be user-friendly and easy to use. Simply enter the text of the news article you want to classify into our app, and it will predict which category the article belongs to. We hope that our app will be useful for journalists, researchers, and anyone else who needs to quickly and accurately classify news articles.</p>
+                <p>Thank you for visiting our website and we hope you find our app useful. If you have any questions or feedback, please don't hesitate to contact us.</p>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a class="git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+
+              </div>
+            </div>
+
+            <section class="team" id="contributors">
+              <div class="center">
+                <h1>Our Team</h1>
+                <h3>creative nerds</h3>
+              </div>
+  
+              <div class="team-content container">
+                <div class="box contributor-card">
+                  <img class="effect" src="/image/02.png">
+                  <p></p>
+                  <h3>Rakshit Khajuria</h3>
+                  <h5>ML king</h5>
+                  <div class="icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+  
+                <div class="box contributor-card">
+                  <img class="effect" src="image/01.png">
+                  <p>Info about contributor 1</p>
+                  <h3>Prikshit Sharma</h3>
+                  <h5>Data scientist</h5>
+                  <div class="icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+  
+                <div class="box contributor-card">
+                  <img class="effect" src="image/02.png">
+                  <p>Info about contributor 1</p>
+                  <h3>Shivansh Gupta</h3>
+                  <h5>sexy hotty</h5>
+                  <div class="icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+  
+              </div>
+            </section>
+
+
+
+    </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -134,10 +179,6 @@ var typeData = new Typed(".news", {
     let scHeight = e.target.scrollHeight;
     textarea.style.height = `${scHeight}px`;
   });
-</script>                </div>
-
-      </div>
-  </div>
-</div>
+</script>          
 </body>
 </html>
