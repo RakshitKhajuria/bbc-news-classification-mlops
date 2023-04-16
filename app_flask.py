@@ -44,7 +44,7 @@ def test():
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
         fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
-        return render_template('index.html', results=pred,tables=[probability.to_html(classes='data',index=False, header=False)], chart=fig.to_json())
+        return render_template('index.html', results=pred,tables=[probability.to_html(classes='table table-striped', index=False)], chart=fig.to_json())
     
     except Exception as e:
         raise CustomException(e,sys)

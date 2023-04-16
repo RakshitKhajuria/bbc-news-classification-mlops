@@ -59,15 +59,14 @@
             </div>
 
             <!-- <div>show result</div> -->
-            <div class="newsType" id="result" style=" font-size: 25px; margin-top: 1rem;">Result {{ results }}</div>
+            <div class="newsType" id="result"> <span style="color: blue; font-size: 20px;">The news is classified as -  </span> {{ results }}</div>
             <div class="predictions">
-            <p class="predictRes" id="tab">{% for table in tables %}
-  
-            {{ table|safe }}
-          
-            {% endfor %}
-            </p>
+              <p class="predictRes" id="tab">{% for table in tables %}
 
+                {{ table|safe }}
+    
+                {% endfor %}
+                </p>
             <div id="chart" class="predictRes">
                 <script>
                     const chartSpec = {{ chart|safe }};
