@@ -31,8 +31,6 @@ body {
     width:1200px;
     margin: 0 auto;
     position: relative;
-    /* padding: 0 8rem; */
-
 }
 
 .navbar{
@@ -46,7 +44,7 @@ body {
 }
 
 .logo a{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
@@ -55,11 +53,10 @@ body {
 .nav-items{
     display:flex;
     gap:2rem;
-    /* padding: 0 3em; */
 }
 
 .nav-items div{
-    font-size:1.1rem;
+    font-size:1.2rem;
     font-weight:500;
     cursor:pointer;
 }
@@ -84,11 +81,18 @@ a{
     margin-top: -2px;
     border: none;
     outline: none;
-    border-radius: 8px;
-    font-size: 0.8rem;
+    border-radius: 9px;
+    font: 200;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
-    transition: scale 0.8s ease;
+    transition: scale 0.7s ease;
+}
+
+.action span{
+
+    position: relative;
+
 }
 
 .action:hover{
@@ -119,7 +123,7 @@ a{
     padding-top: 8rem;
     font-weight: 600;
     line-height: 25px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .news{
@@ -128,21 +132,22 @@ a{
 }
 
 .predict{
-    background-color: #5a228b;
-}
+    background: radial-gradient(#281c3e,#0f051d);
+    min-height: 100vh;
+  }
 
 
 .predict h2{
     padding-top: 2rem;
     color: #fff;
-    font-size: 32px;
+    font-size: 34px;
     text-align: center;
-    margin-top: 5rem;
+    text-transform: capitalize;
     position: relative;
 }
 
 .predict textarea{
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     width: 1200px;
@@ -157,6 +162,7 @@ a{
     color: #fff;
     border: 1px solid #fff;
     box-shadow: 2px 2px 10px #fff;
+    margin-bottom: 12px;
   }
   textarea::placeholder{
     color: #b3b3b3;
@@ -169,48 +175,37 @@ a{
     width: 0px;
   }
 
-.btn{
-  display: block;
-  margin: 0 ;
-  margin-top: 10px;
-  margin-left: 10rem;
-  font-size: 15px;
-  position: relative;
-  z-index: 1;
-}
-/* .btn-1{
-    margin-left: 11em;
-}
-
- .btn-2{
-  margin-left: 81rem; 
-  margin-top: -2.2rem;
-}
-  */
-
-/* .flex{
+.predict-flex{
   display: flex;
-  margin-left: 163px;
+  justify-content: center;
   width: 1200px;
-  justify-content: space-between;
-  padding-bottom: 3rem;
-} */
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
 
 .newsType{
+  position: relative;
   display: flex;
   justify-content: center;
   font-weight: bold;
-  color: #5a228b;
-  text-transform: capitalize;
-  font-size: 25px;
+  color: #281c3e;
+  background: #fff;
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 14px;
+  font: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  vertical-align: middle;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .predictions{
   display: flex;
   justify-content: space-around;
   padding-bottom: 1rem;
+  position: relative;
 }
 
 
@@ -219,37 +214,33 @@ a{
     padding-top: 2rem;
     color: #fff;
     /* background-color: #fff; */
+    height: 100vh;
 
   }
   
   
 .abt-heading{
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 20px;
     text-align: center;
   }
   
   p {
     font-size: 18px;
+    word-spacing: normal;
     line-height: 1.5;
     margin-bottom: 30px;
+    text-align: justify;
   }
   
   .social-links {
     font-size: 45px;
-    /* gap: 2rem;
-    padding-bottom: 3rem; */
   }
   
   .social-links a {
     color: #fff;
-    /* margin-right: 20px; */
   }
   
-  /* .social-links a:hover {
-    color: #0077b5;
-  }
-   */
   .git{
     display:flex;
     gap:2rem;
@@ -258,8 +249,9 @@ a{
   }
   .git :hover{
     color: #758283;
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
   }
-
 
 
   #wrapper::-webkit-scrollbar {
@@ -283,7 +275,7 @@ a{
    .team{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: radial-gradient(#281c3e,#0f051d);
     display: flex;
     align-items: center;
@@ -310,16 +302,17 @@ a{
     margin-bottom: 15px;
   }
   .center h2{
-    padding-top: 3rem;
+    padding-top: 2rem;
     color: #fff;
-    font-size: 3rem;
+    font-size: 34px;
     text-align: center;
   }
 
   .center h3{
-    margin-top: 15px;
-    font-size: 30px;
-    color: #5DA3FA;
+    margin-top: 8px;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--ligBlue);
     display: flex;
     justify-content: center;
   }

@@ -15,7 +15,7 @@
 <body>
     <div id="wrapper">
 
-        <div class="container">
+        <div class="container" id="home">
 
           <div class="navbar"> 
 
@@ -25,13 +25,13 @@
             
 
             <div class="social-links">
-              <a class="git" href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="git" href="https://github.com/Ryzxxl/bbc-news-classification-mlops" target="_blank"><i class="fab fa-github"></i></a>
             </div>
             
             <div class="nav-items">
                 <div><a href="#about-us">About</a></div>
                 <div><a href="#contributors">Contributors</a></div>
-                <a href="#start" class="action">Get Started</a>
+                <a href="#start" class="action">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
                 
             </div>
           </div>
@@ -46,37 +46,37 @@
         </div>
 
         <div class="predict" id="start">
-            <div class="predict-flex">
-                <form action="/submit" method="post">
-                    <h2>Enter news here:</h2> 
-      
-                    <textarea spellcheck="false" class="container" name="news" id="news" placeholder="Enter News..." required></textarea>
-                    <button type="submit" class="action btn btn-1" id="toggle-btn">Predict</button>
-                </form>
-                <form action="/reset" method="post">
-                    <button  type="submit" onsubmit="" class="action  btn btn-2">reset</button>
-                </form>
-            </div>
-
-            <!-- <div>show result</div> -->
-            <div class="newsType" id="result"> <span style="color: blue; font-size: 20px;">The news is classified as -  </span> {{ results }}</div>
-            <div class="predictions">
-              <p class="predictRes" id="tab">{% for table in tables %}
-
-                {{ table|safe }}
+          <div class="predict-flex">
+              <form action="/submit" method="post">
+                  <h2>Enter news here:</h2> 
     
-                {% endfor %}
-                </p>
-            <div id="chart" class="predictRes">
-                <script>
-                    const chartSpec = {{ chart|safe }};
-                    const chartContainer = document.getElementById('chart');
-                    vegaEmbed(chartContainer, chartSpec);
-                </script>
-            </div>
+                  <textarea spellcheck="false" class="container" name="news" id="my-input" placeholder="Enter News..." required></textarea>
+                  <div class="button-group"></div>
+                  <button type="submit" class="action btn-1" id="toggle-btn">Predict</button>
+              </form>
           </div>
+          <div class="btn-2 container">
+            <form action="/reset" method="post">
+              <button type="submit" onsubmit="" class="action">Reset</button>
+            </form>
+          </div>
+        
 
+          <div class="newsType container" id="result">{{ results }}</div>
+          <div class="predictions container">
+            <div class="table" style="color: #fff; max-height: auto; font-size: 2rem;">
+              {{ tables|safe }}
+            </div>
+          <div id="chart" class="predictRes">
+              <script>
+                  const chartSpec = {{ chart|safe }};
+                  const chartContainer = document.getElementById('chart');
+                  vegaEmbed(chartContainer, chartSpec);
+              </script>
+          </div>
         </div>
+
+      </div>
 
 
         <div id="about-us">
@@ -102,38 +102,36 @@
 
             <div class="team-content container">
               <div class="box contributor-card">
-                <img class="effect" src="https://www.linkpicture.com/q/03_1.webp">
+                <img class="effect" src="https://cdn.discordapp.com/attachments/1076896182191788042/1097902175864246312/03-removebg-preview_2-fotor-bg-remover-2023041820413.png">
                 <p></p>
                 <h3>Rakshit Khajuria</h3>
-                <h5>ML king</h5>
+                <h5>ML Engineer</h5>
                 <div class="icons">
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/rakshit-khajuria/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/Ryzxxl" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://instagram.com/rakshit_khajuriaa?igshid=ZDdkNTZiNTM=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
 
               <div class="box contributor-card">
-                <img class="effect" src="https://blenderartists.org/uploads/default/original/4X/6/a/d/6adcaac6f7378fbf998f5ea0490724cea82eb01f.jpeg">
-                <p>Info about contributor 1</p>
+                <img class="effect" src="https://cdn.discordapp.com/attachments/1076896182191788042/1097903018680262656/01-removebg-preview-fotor-bg-remover-20230418204426.png">
                 <h3>Prikshit Sharma</h3>
-                <h5>hentai lover</h5>
+                <h5>ML Engineer</h5>
                 <div class="icons">
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/prikshit7766/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/Prikshit7766" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.instagram.com/prikshit7766/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
 
               <div class="box contributor-card">
-                <img class="effect" src="https://www.linkpicture.com/q/01_12.png">
-                <p>Info about contributor 1</p>
+                <img class="effect" src="https://cdn.discordapp.com/attachments/1076896182191788042/1097901403348942898/Pngtreebusiness_man_avatar_8855195-fotor-bg-remover-20230418203759.png">
                 <h3>Shivansh Gupta</h3>
-                <h5>sexy hotty</h5>
+                <h5>Web Developer</h5>
                 <div class="icons">
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/shivansh-gupta-6352821bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/Shivansh270" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://instagram.com/guptashivansh?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram" target="_blank"></i></a>
                 </div>
               </div>
 
@@ -141,6 +139,26 @@
         </section>
 
     </div>
+
+    <script>
+      const input = document.getElementById('my-input');
+      input.addEventListener('blur', function() {
+        const value = input.value.trim();
+        const words = value.split(/\s+/).length;
+        if (words < 8) {
+          alert('Please enter at least 8 words.');
+        }
+      });
+    </script>
+  
+  <script>
+    const myButton = document.getElementsByClassName("newsType");
+    const myText = document.getElementsByClassName("spanClass");
+
+    myButton.addEventListener("click", function() {
+    myText.style.display = "block";
+  });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>

@@ -23,17 +23,6 @@ def reset():
     
     except Exception as e:
         raise CustomException(e,sys)
-# @app.route('/submit')
-# def predicthome():
-#     return render_template('predict.html')
-
-# @app.route('/about')
-# def about():
-#     return render_template('about.html')
-
-# @app.route('/dataset')
-# def dataset():
-#     return render_template('dataset.html')
 
     
 @app.route('/submit', methods=['POST','GET'])
@@ -44,7 +33,8 @@ def test():
         PredictPipeline=predict_pipeline.PredictPipeline(raw_text)
         pred,probability=PredictPipeline.predict()
         fig = alt.Chart(probability).mark_bar().encode(x='Category',y='Probability', color='Category')
-        return render_template('index.html', results=pred,tables=[probability.to_html(classes='table table-striped', index=False)], chart=fig.to_json())
+        
+        return render_template('index.html', results="RESULT - "+pred,tables=probability.to_html(classes="table table-striped",index=False), chart=fig.to_json())
     
     except Exception as e:
         raise CustomException(e,sys)
