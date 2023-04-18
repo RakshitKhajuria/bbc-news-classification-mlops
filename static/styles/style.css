@@ -187,9 +187,9 @@ a{
   position: relative;
   display: flex;
   justify-content: center;
-  font-weight: bold;
-  color: #281c3e;
-  background: #fff;
+  font-weight: 600;
+  color: #1f1f1f;
+  background: var(--ligBlue);
   margin: 0 auto;
   width: 400px;
   border-radius: 14px;
@@ -198,7 +198,7 @@ a{
   font-size: 1.8rem;
   vertical-align: middle;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .predictions{
@@ -208,6 +208,37 @@ a{
   position: relative;
 }
 
+table{
+  font-size: 1.8rem;
+  z-index: 2;
+  text-transform: capitalize;
+  width: 380px;
+  height: 390px; 
+  color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 10px #fff;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+th{
+  background-color: var(--ligBlue);
+  color: #fff;
+  font-family: 'Open Sans',Sans-serif;
+  font-weight: 600;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1f1f1f;
+ }
+
+td{
+  padding: 12px 18px;
+  text-align: center;
+  font-weight: 400;
+}
 
 #about-us{
     padding: 0;
@@ -221,9 +252,16 @@ a{
   
 .abt-heading{
     font-size: 34px;
-    margin-bottom: 20px;
     text-align: center;
   }
+
+.abt-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
   
   p {
     font-size: 18px;
