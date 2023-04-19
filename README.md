@@ -67,3 +67,41 @@ Below table shows the result on test set
 |------------------------|----------|-----------------|--------------|----------|
 | Logistic Regression    | 0.975    | 0.98            | 0.97         | 0.97     |
 | SGDClassifier          | 0.977    | 0.98            | 0.98         | 0.98     |
+
+# Dockerizing Application
+
+```bash
+  docker build -t appname:latest .
+  docker run -p 8080:8080 appname:latest
+```
+
+# Deployment
+
+To deploy this project on EC2 with Docker
+
+```bash
+#optinal
+    sudo apt-get update -y 
+    sudo apt-get upgrade 
+
+#Required
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    sudo usermod -aG docker ubuntu
+    newgrp docker
+
+```
+## Configure your EC2 as self-hosted runner
+
+## Setup github secrets
+```bash
+AWS_ACCESS_KEY_ID= {{ AWS_ACCESS_KEY_ID}}
+
+AWS_SECRET_ACCESS_KEY= {{AWS_SECRET_ACCESS_KEY}}
+
+AWS_REGION = {{AWS_REGION}}
+
+AWS_ECR_LOGIN_URI = demo>> 566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
+ECR_REPOSITORY_NAME = demo>> simple-app
+```
