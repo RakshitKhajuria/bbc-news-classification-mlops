@@ -1,11 +1,21 @@
 # BBC - NEWS - CLASSIFICATION -MLOPS
 
+## Table of contents
+
+* [Demo](#Demo)
+* [Dataset Discription](#Dataset Discription)
+* [Files Description](#Files Description)
+* [Method](#Method)
+* [Result](#Result)
+* [Run Locally](#Run Locally)
+* [Dockerizing Application](#Dockerizing-Application)
+* [Deployment](#Deployment)
+
+# Dataset Discription
+
 Consists of 2225 documents from the BBC news website corresponding to stories in five topical areas from 2004-2005.
 
 Class Labels: 5 (business, entertainment, politics, sport, tech)
-
-# Dataset Discription: 
-
 
 [BBC Datasets Descrition](http://mlg.ucd.ie/datasets/bbc.html) 
 
@@ -27,7 +37,7 @@ Class Labels: 5 (business, entertainment, politics, sport, tech)
 
 Divided the feature extracted dataset into two parts train and test set. Train set contains 1780 examples and Test set contains 445 examples. 
 
-# Result
+# Results
 
 **Below table shows the result on test set**
 
