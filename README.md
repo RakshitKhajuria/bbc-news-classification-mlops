@@ -33,7 +33,7 @@ Below table shows the result on test set
 
 # 1. TfidfVectorizer + Model
 
-| MODEL                  | ACCURACY | PRECISION | RECALL MACRO | F1 MACRO |
+| **MODEL**              | **ACCURACY** | **PRECISION MACRO** | **RECALL MACRO** | **F1 MACRO** |
 |------------------------|----------|-----------|--------------|----------|
 | Random Forest          | 0.938889 | 0.944748  | 0.935345     | 0.938332 |
 | Decision Tree          | 0.797222 | 0.795641  | 0.789634     | 0.790323 |
@@ -48,7 +48,7 @@ Below table shows the result on test set
 
 # 2. CountVectorizer + model
 
-| MODEL                  | ACCURACY | PRECISION MACRO | RECALL MACRO | F1 MACRO |
+| **MODEL**              | **ACCURACY** | **PRECISION MACRO** | **RECALL MACRO** | **F1 MACRO** |
 |------------------------|----------|-----------------|--------------|----------|
 | Random Forest          | 0.952778 | 0.956768        | 0.949247     | 0.951832 |
 | Decision Tree          | 0.794444 | 0.788847        | 0.787376     | 0.785466 |
