@@ -29,7 +29,7 @@ Divided the feature extracted dataset into two parts train and test set. Train s
 
 # Result
 
-Below table shows the result on test set
+**Below table shows the result on test set**
 
 ## 1. TfidfVectorizer + Model
 
