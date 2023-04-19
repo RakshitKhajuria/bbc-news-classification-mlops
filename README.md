@@ -11,6 +11,12 @@
 * [Dockerizing Application](#Dockerizing-Application)
 * [Deployment](#Deployment)
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+# Demo
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 # Dataset Discription
 
 Consists of 2225 documents from the BBC news website corresponding to stories in five topical areas from 2004-2005.
@@ -20,6 +26,8 @@ Class Labels: 5 (business, entertainment, politics, sport, tech)
 [BBC Datasets Descrition](http://mlg.ucd.ie/datasets/bbc.html) 
 
 [Dataset](http://mlg.ucd.ie/files/datasets/bbc-fulltext.zip)
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Files Description
 * dataset/data_files: Data folders each containing several news txt files
@@ -32,10 +40,13 @@ Class Labels: 5 (business, entertainment, politics, sport, tech)
 
 * model/test.ipynb: jupyter notebook 
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Method
 
 Divided the feature extracted dataset into two parts train and test set. Train set contains 1780 examples and Test set contains 445 examples. 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Results
 
@@ -78,6 +89,8 @@ Divided the feature extracted dataset into two parts train and test set. Train s
 | Logistic Regression    | 0.975    | 0.98            | 0.97         | 0.97     |
 | SGDClassifier          | 0.977    | 0.98            | 0.98         | 0.98     |
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 # Run Locally
 
 Clone the project
@@ -106,6 +119,7 @@ To run the **Streamlit App**
 ```bash
   streamlit run application.py
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Dockerizing Application
 
@@ -113,6 +127,7 @@ To run the **Streamlit App**
   docker build -t appname:latest .
   docker run -p 8080:8080 appname:latest
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Deployment
 
@@ -144,3 +159,4 @@ AWS_ECR_LOGIN_URI = demo>> 566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
 ECR_REPOSITORY_NAME = demo>> simple-app
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
