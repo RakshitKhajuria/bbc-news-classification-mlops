@@ -31,7 +31,7 @@ Divided the feature extracted dataset into two parts train and test set. Train s
 
 Below table shows the result on test set
 
-# 1. TfidfVectorizer + Model
+## 1. TfidfVectorizer + Model
 
 | **MODEL**              | **ACCURACY** | **PRECISION MACRO** | **RECALL MACRO** | **F1 MACRO** |
 |------------------------|----------|-----------|--------------|----------|
@@ -46,7 +46,7 @@ Below table shows the result on test set
 | RidgeClassifier        | 0.969444 | 0.969874  | 0.968333     | 0.968658 |
 | SGDClassifier          | 0.972222 | 0.972638  | 0.971150     | 0.971473 |
 
-# 2. CountVectorizer + model
+## 2. CountVectorizer + model
 
 | **MODEL**              | **ACCURACY** | **PRECISION MACRO** | **RECALL MACRO** | **F1 MACRO** |
 |------------------------|----------|-----------------|--------------|----------|
@@ -61,14 +61,14 @@ Below table shows the result on test set
 | RidgeClassifier        | 0.916667 | 0.920257        | 0.910896     | 0.913691 |
 | SGDClassifier          | 0.947222 | 0.947606        | 0.944972     | 0.945842 |
 
-# 3. Hyperparameter Tuning 
+## 3. Hyperparameter Tuning 
 
 | MODEL                  | ACCURACY | PRECISION MACRO | RECALL MACRO | F1 MACRO |
 |------------------------|----------|-----------------|--------------|----------|
 | Logistic Regression    | 0.975    | 0.98            | 0.97         | 0.97     |
 | SGDClassifier          | 0.977    | 0.98            | 0.98         | 0.98     |
 
-## Run Locally
+# Run Locally
 
 Clone the project
 
