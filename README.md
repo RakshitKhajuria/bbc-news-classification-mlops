@@ -31,7 +31,10 @@ Divided the feature extracted dataset into two parts train and test set. Train s
 
 Below table shows the result on test set
 
+1. TfidfVectorizer + Model
+
 Model | Accuracy
 --------- | ---------
 Logistic Regression | 0.9461
+
 CatBoost | 0.9573
