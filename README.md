@@ -3,11 +3,11 @@
 ## Table of contents
 
 * [Demo](#Demo)
-* [Dataset Discription](#Dataset Discription)
-* [Files Description](#Files Description)
+* [Dataset Discription](#Dataset-Discription)
+* [Files Description](#Files-Description)
 * [Method](#Method)
 * [Result](#Result)
-* [Run Locally](#Run Locally)
+* [Run Locally](#Run-Locally)
 * [Dockerizing Application](#Dockerizing-Application)
 * [Deployment](#Deployment)
 
