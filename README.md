@@ -46,3 +46,24 @@ Below table shows the result on test set
 | RidgeClassifier        | 0.969444 | 0.969874  | 0.968333     | 0.968658 |
 | SGDClassifier          | 0.972222 | 0.972638  | 0.971150     | 0.971473 |
 
+# 2. CountVectorizer + model
+
+| MODEL                  | ACCURACY | PRECISION MACRO | RECALL MACRO | F1 MACRO |
+|------------------------|----------|-----------------|--------------|----------|
+| Random Forest          | 0.952778 | 0.956768        | 0.949247     | 0.951832 |
+| Decision Tree          | 0.794444 | 0.788847        | 0.787376     | 0.785466 |
+| Logistic Regression    | 0.958333 | 0.959079        | 0.955287     | 0.956771 |
+| K-Neighbors Classifier | 0.580556 | 0.824127        | 0.564493     | 0.589024 |
+| XGBClassifier          | 0.947222 | 0.947193        | 0.944287     | 0.945144 |
+| CatBoosting Classifier | 0.955556 | 0.957578        | 0.953577     | 0.955211 |
+| AdaBoost Classifier    | 0.750000 | 0.768979        | 0.742884     | 0.747008 |
+| MultinomialNB          | 0.975000 | 0.975004        | 0.974890     | 0.974578 |
+| RidgeClassifier        | 0.916667 | 0.920257        | 0.910896     | 0.913691 |
+| SGDClassifier          | 0.947222 | 0.947606        | 0.944972     | 0.945842 |
+
+# 3. Hyperparameter Tuning 
+
+| MODEL                  | ACCURACY | PRECISION MACRO | RECALL MACRO | F1 MACRO |
+|------------------------|----------|-----------------|--------------|----------|
+| Logistic Regression    | 0.975    | 0.98            | 0.97         | 0.97     |
+| SGDClassifier          | 0.977    | 0.98            | 0.98         | 0.98     |
