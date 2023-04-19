@@ -68,6 +68,35 @@ Below table shows the result on test set
 | Logistic Regression    | 0.975    | 0.98            | 0.97         | 0.97     |
 | SGDClassifier          | 0.977    | 0.98            | 0.98         | 0.98     |
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Ryzxxl/bbc-news-classification-mlops.git
+```
+
+Go to the project directory
+
+```bash
+  cd bbc-news-classification-mlops
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+To run the **Flask App**
+```bash
+  python app_flask.py
+```
+To run the **Streamlit App**
+```bash
+  streamlit run application.py
+```
+
 # Dockerizing Application
 
 ```bash
