@@ -77,7 +77,7 @@ Below table shows the result on test set
 
 # Deployment
 
-To deploy this project on EC2 with Docker
+## To deploy this project on EC2 with Docker
 
 ```bash
 #optinal
