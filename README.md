@@ -167,3 +167,10 @@ AWS_ECR_LOGIN_URI = demo>> 566373416292.dkr.ecr.ap-south-1.amazonaws.com
 ECR_REPOSITORY_NAME = demo>> simple-app
 ```
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<h1 align="center">Contributors</h1>
+
+- [Rakshit Khajuria](https://github.com/Ryzxxl)
+- [Prikshit Sharma](https://github.com/Prikshit7766)
+- [Shivansh Gupta](https://github.com/Shivansh270)
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
